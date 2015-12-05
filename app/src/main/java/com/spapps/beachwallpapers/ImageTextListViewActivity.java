@@ -98,23 +98,25 @@ public class ImageTextListViewActivity extends AppCompatActivity implements OnIt
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         int pos = position+1;
         switch(pos) {
-            case 1://beach
+            case 1://beach com.spapps.beachwallpapers
                 Intent material = new Intent(ImageTextListViewActivity.this,ImagesGridView.class);
                 startActivity(material);
                 break;
-            case 2://nature
+            case 2://nature  com.spapps.naturewallpapers
                 Intent intentOne = new Intent(Intent.ACTION_VIEW);
-                intentOne.setData(Uri.parse("market://details?id=com.poapps.crosswallpapers"));
+                intentOne.setData(Uri.parse("market://details?id=com.spapps.naturewallpapers"));
                 startActivity(intentOne);
                 break;
-            case 3://space
+            case 3://space com.spapps.spacewallpapers
                 Intent intentTwo = new Intent(Intent.ACTION_VIEW);
-                intentTwo.setData(Uri.parse("market://details?id=com.poapps.girlywallpapres"));
+                intentTwo.setData(Uri.parse("market://details?id=com.spapps.spacewallpapers"));
                 startActivity(intentTwo);
                 break;
-            case 4://new york city
-                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("market://search?q=pub:poapps")));
-
+            case 4://new york city com.spapps.newyorkcitywallpapers
+                Intent nycw = new Intent(Intent.ACTION_VIEW);
+                nycw.setData(Uri.parse("market://details?id=com.spapps.newyorkcitywallpapers"));
+                startActivity(nycw);
+                break;
             case 5://nature live wallpapers
                 Intent natureLive = new Intent(Intent.ACTION_VIEW);
                 natureLive.setData(Uri.parse("market://details?id=com.spapps.naturelivewallpapers"));
@@ -175,7 +177,7 @@ public class ImageTextListViewActivity extends AppCompatActivity implements OnIt
         }
         if(id==R.id.licence_title){
             liceceDialog = new AlertDialog.Builder(ImageTextListViewActivity.this);
-            liceceDialog.setTitle("photo Licence");
+            liceceDialog.setTitle("Licence");
             liceceDialog.setMessage("All images on Beach Wallpapers are licensed under the Creative Commons Zero (CC0) license. " +
                     "\n\nThis means the images are completely free to be used for any legal purpose."
                     + "\n\nThe images are free for personal and even for commercial use also."
@@ -198,7 +200,7 @@ public class ImageTextListViewActivity extends AppCompatActivity implements OnIt
         }
         if(id==R.id.about_title) {
             dialog = new AlertDialog.Builder(ImageTextListViewActivity.this);
-            dialog.setTitle("About Us");
+            dialog.setTitle("About");
             dialog.setMessage("Rocking Apps \nBeach Wallpapers \nVersion 1.0");
             dialog.setCancelable(false);
             dialog.setPositiveButton("Ok",

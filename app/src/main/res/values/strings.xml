@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Beach Wallpapers</string>
+    <string name="share_string">Share</string>
+    <string name="more_string">More Apps</string>
+    <string name="licence_string">Licence</string>
+    <string name="about_string">About</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="action_topfree">Free Apps </string>
+    <string name="image">Thumbnail</string>
+</resources>
